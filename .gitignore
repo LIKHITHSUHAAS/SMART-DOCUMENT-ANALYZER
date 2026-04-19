@@ -1,0 +1,22 @@
+# Python
+backend/__pycache__/
+backend/venv/
+backend/.env
+backend/uploads/
+backend/data_db/
+*.pyc
+
+# Node
+frontend/node_modules/
+frontend/dist/
+.DS_Store
+
+# Local test files
+test.pdf
+test_upload.py
+test_chat.py
+test_models.py
+list_models.py
+list_models_v2.py
+debug_backend.py
+verify_reset.py
