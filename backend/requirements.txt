@@ -5,6 +5,7 @@ python-multipart
 langchain
 langchain-chroma
 langchain-google-genai
+langchain-text-splitters
 pymupdf
 pytesseract
 pillow
