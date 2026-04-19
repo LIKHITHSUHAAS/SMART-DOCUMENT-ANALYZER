@@ -5,8 +5,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 
-from core.parser import parse_document
-from core.rag import ingest_chunks_into_db, query_rag
+try:
+    from core.parser import parse_document
+    from core.rag import ingest_chunks_into_db, query_rag
+except ImportError:
+    from backend.core.parser import parse_document
+    from backend.core.rag import ingest_chunks_into_db, query_rag
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
