@@ -1,0 +1,19 @@
+name: Sync to Hugging Face Hub
+on:
+  push:
+    branches: [master]
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Push to hub
+        uses: huggingface/hub-sync@v1.0
+        with:
+          github_repo_id: LIKHITHSUHAAS/SMART-DOCUMENT-ANALYZER
+          huggingface_repo_id: likhithsuhaas/SMART-DOCUMENT-ANALYZER
+          hf_token: ${{ secrets.HF_TOKEN }}
+          repo_type: space
